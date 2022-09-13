@@ -31,7 +31,7 @@ os.chdir('yolov5')
 ## Google Colab
 Training YOLO
 ```
-!python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 3000
+!python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 24 --name Model --epochs 3000
 !python export.py --weights runs/train/Model/weights/best.pt --include torchscript onnx
 print('Training Done')
 ```
