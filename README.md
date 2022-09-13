@@ -65,6 +65,46 @@ Starting training for 3000 epochs...
                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  2.07it/s]
                  all         20          0          0          0          0          0
                  
+Stopping training early as no improvement observed in last 100 epochs. Best results observed at epoch 550, best model saved as best.pt.
+To update EarlyStopping(patience=100) pass a new patience value, i.e. `python train.py --patience 300` or use `--patience 0` to disable EarlyStopping.
+
+651 epochs completed in 1.782 hours.
+Optimizer stripped from runs/train/Model/weights/last.pt, 92.9MB
+Optimizer stripped from runs/train/Model/weights/best.pt, 92.9MB
+
+Validating runs/train/Model/weights/best.pt...
+Fusing layers... 
+YOLOv5l summary: 367 layers, 46129818 parameters, 0 gradients, 107.7 GFLOPs
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  1.92it/s]
+                 all         20        100      0.986       0.99       0.99      0.777
+     Symbols_address         20         20      0.994          1      0.995      0.797
+         Symbols_UDI         20         21      0.995      0.952      0.977      0.748
+          Symbols_TH         20         19      0.947          1       0.99      0.767
+        Symbols_temp         20         20      0.997          1      0.995      0.795
+        Symbols_Humi         20         20      0.996          1      0.995      0.777
+Results saved to runs/train/Model
+export: data=data/coco128.yaml, weights=['runs/train/Model/weights/best.pt'], imgsz=[640, 640], batch_size=1, device=cpu, half=False, inplace=False, train=False, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=12, verbose=False, workspace=4, nms=False, agnostic_nms=False, topk_per_class=100, topk_all=100, iou_thres=0.45, conf_thres=0.25, include=['torchscript', 'onnx']
+YOLOv5 🚀 v6.1-250-g6adc53b Python-3.7.13 torch-1.11.0+cu102 CPU
+
+Fusing layers... 
+YOLOv5l summary: 367 layers, 46129818 parameters, 0 gradients, 107.7 GFLOPs
+
+PyTorch: starting from runs/train/Model/weights/best.pt with output shape (1, 25200, 10) (88.6 MB)
+
+TorchScript: starting export with torch 1.11.0+cu102...
+TorchScript: export success, saved as runs/train/Model/weights/best.torchscript (176.6 MB)
+
+ONNX: starting export with onnx 1.12.0...
+ONNX: export success, saved as runs/train/Model/weights/best.onnx (176.4 MB)
+
+Export complete (22.13s)
+Results saved to /content/drive/MyDrive/yolo_training/yolov5/runs/train/Model/weights
+Detect:          python detect.py --weights runs/train/Model/weights/best.onnx
+PyTorch Hub:     model = torch.hub.load('ultralytics/yolov5', 'custom', 'runs/train/Model/weights/best.onnx')
+Validate:        python val.py --weights runs/train/Model/weights/best.onnx
+Visualize:       https://netron.app
+Training Done
+                 
 ```
 
 ## Test
