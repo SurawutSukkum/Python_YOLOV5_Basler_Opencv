@@ -1,28 +1,36 @@
 # Python_YOLOV5_Basler_Opencv
 ## Install
-* pip install opencv-contrib-python
-* pip install pandas 
-* pip install labelImg
-* pip install PyYAML
-
+Support python version 3.7.9 
+```
+pip install opencv-contrib-python
+pip install pandas 
+pip install labelImg
+pip install PyYAML
+```
 
 ## Google Colab
 Connect to drive.
-* from google.colab import drive
-* drive.mount('/content/drive')
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
 
 ## Google Colab
 Install requirements
-* import os
-* os.chdir('/content/drive/MyDrive/yolo_training')
-* os.chdir('yolov5')
-* !pip install -r requirements.txt
+```
+import os
+os.chdir('/content/drive/MyDrive/yolo_training')
+os.chdir('yolov5')
+!pip install -r requirements.txt
+```
+
 ## Google Colab
 Training YOLO
-* !python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 1000
-* !python export.py --weights runs/train/Model/weights/best.pt --include torchscript onnx
-* print('Training Done')
-
+```
+!python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 1000
+!python export.py --weights runs/train/Model/weights/best.pt --include torchscript onnx
+print('Training Done')
+```
 ## Google Colab
 Result
 * YOLOv5l summary: 468 layers, 46159834 parameters, 46159834 gradients, 108.3 GFLOPs
