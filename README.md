@@ -50,6 +50,7 @@ Image sizes 640 train, 640 val
 Using 2 dataloader workers
 Logging results to runs/train/Model
 Starting training for 1000 epochs...
+```
 
 ## Test
 ![alt text](https://github.com/SurawutSukkum/Python_YOLOV5_Basler_Opencv/blob/main/Capture.JPG?raw=true)
