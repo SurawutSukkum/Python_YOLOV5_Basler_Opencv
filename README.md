@@ -31,7 +31,7 @@ os.chdir('yolov5')
 ## Google Colab
 Training YOLO
 ```
-!python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 1000
+!python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 3000
 !python export.py --weights runs/train/Model/weights/best.pt --include torchscript onnx
 print('Training Done')
 ```
@@ -53,7 +53,18 @@ AutoAnchor: 6.02 anchors/target, 1.000 Best Possible Recall (BPR). Current ancho
 Image sizes 640 train, 640 val
 Using 2 dataloader workers
 Logging results to runs/train/Model
-Starting training for 1000 epochs...
+Starting training for 3000 epochs...
+
+ Epoch   gpu_mem       box       obj       cls    labels  img_size
+    0/2999     13.4G    0.1137   0.06378    0.0494        77       640: 100% 4/4 [00:08<00:00,  2.05s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  2.21it/s]
+                 all         20          0          0          0          0          0
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+    1/2999     13.4G    0.1139   0.06479   0.04928        85       640: 100% 4/4 [00:03<00:00,  1.05it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  2.07it/s]
+                 all         20          0          0          0          0          0
+                 
 ```
 
 ## Test
