@@ -7,6 +7,10 @@ pip install pandas
 pip install labelImg
 pip install PyYAML
 ```
+## Google drive
+Upload this folder to google drive: `yolo_training` 
+
+`https://github.com/SurawutSukkum/Python_YOLOV5_Basler_Opencv/tree/main/yolo_training`
 
 ## Google Colab
 Connect to drive.
