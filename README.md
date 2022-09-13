@@ -106,6 +106,11 @@ Visualize:       https://netron.app
 Training Done
                  
 ```
+## Google Colab
+Result from google drive in folder: `yolo_training/yolov5/runs/train/Model`  
+![alt text](https://github.com/SurawutSukkum/Python_YOLOV5_Basler_Opencv/blob/main/results.png?raw=true)
 
 ## Test
+Model result from google drive in folder: `yolo_training/yolov5/runs/train/Model/weights/best.onnx`  
+Test model with python code: `https://github.com/SurawutSukkum/Python_YOLOV5_Basler_Opencv/blob/main/test.py` 
 ![alt text](https://github.com/SurawutSukkum/Python_YOLOV5_Basler_Opencv/blob/main/Capture.JPG?raw=true)
