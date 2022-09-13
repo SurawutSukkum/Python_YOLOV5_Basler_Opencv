@@ -5,8 +5,21 @@
 * pip install labelImg
 * pip install PyYAML
 ##Google Colab
+* from google.colab import drive
+* drive.mount('/content/drive')
 
-*YOLOv5l summary: 468 layers, 46159834 parameters, 46159834 gradients, 108.3 GFLOPs
+
+* import os
+* os.chdir('/content/drive/MyDrive/yolo_training')
+* os.chdir('yolov5')
+* !pip install -r requirements.txt
+
+* !python train.py --data my_obj.yaml --cfg yolov5l.yaml --batch-size 16 --name Model --epochs 1000
+* !python export.py --weights runs/train/Model/weights/best.pt --include torchscript onnx
+* print('Training Done')
+
+
+* YOLOv5l summary: 468 layers, 46159834 parameters, 46159834 gradients, 108.3 GFLOPs
 *
 * Transferred 57/613 items from yolov5s.pt
 * AMP: checks passed ✅
