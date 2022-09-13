@@ -36,7 +36,7 @@ Training YOLO
 print('Training Done')
 ```
 ## Google Colab
-Result
+Training
 ```
 YOLOv5l summary: 468 layers, 46159834 parameters, 46159834 gradients, 108.3 GFLOPs
 
