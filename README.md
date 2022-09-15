@@ -6,6 +6,7 @@ pip install opencv-contrib-python
 pip install pandas 
 pip install labelImg
 pip install PyYAML
+pip install pytesseract
 ```
 ## Google drive
 Upload this folder to google drive: `yolo_training` 
